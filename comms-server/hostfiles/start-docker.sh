@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --name="comms-server" -v /home/kevin/py-apps/comms-server/hostfiles:/home/default/hostfiles -v /home/kevin/recorded-video:/home/default/recorded-video --privileged -i -t -d -p 64738:64738/udp -p 64738:64738 --device /dev/blackmagic/io0 pmw1/comms-server 
